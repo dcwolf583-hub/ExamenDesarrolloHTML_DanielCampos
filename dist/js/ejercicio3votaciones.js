@@ -20,9 +20,15 @@ $("#btnVotar").click(() => {
             icon: "error",
             confirmButtonText: "Aceptar"
         });
-        return;
-
         
+    } else if ($("#candidato1").is(":selected") == false && $("#candidato2").is(":selected") == false && $("#candidato3").is(":selected") == false) {
+        swal.fire({
+            title: "Error",
+            text: "Debe seleccionar un candidato",
+            icon: "error",
+            confirmButtonText: "Aceptar"
+        });
+
     } else {
         
         /* Validación de los candidatos */
@@ -45,9 +51,9 @@ $("#btnVotar").click(() => {
         $("#txtDNI").val("");
         $("#txtNombre").val("");
         $("#resultados").text("");
-        $("#candidato1").prop("checked", false);
-        $("#candidato2").prop("checked", false);
-        $("#candidato3").prop("checked", false);
+        $("#candidato1").prop("selected", false);
+        $("#candidato2").prop("selected", false);
+        $("#candidato3").prop("selected", false);
         $("#txtDNI").prop("disabled", false);
         $("#txtNombre").prop("disabled", false);
                 
@@ -75,9 +81,9 @@ $("#btnLimpiar").click(() => {
   $("#txtDNI").val("");
   $("#txtNombre").val("");
   $("#resultados").text("");
-  $("#candidato1").prop("checked", false);
-  $("#candidato2").prop("checked", false);
-  $("#candidato3").prop("checked", false);
+  $("#candidato1").prop("selected", false);
+  $("#candidato2").prop("selected", false);
+  $("#candidato3").prop("selected", false);
   $("#txtDNI").prop("disabled", false);
   $("#txtNombre").prop("disabled", false);
   votosCand1 = [];
