@@ -21,7 +21,7 @@ $("#btnVotar").click(() => {
             confirmButtonText: "Aceptar"
         });
         return;
-        
+
         
     } else {
         
@@ -80,4 +80,7 @@ $("#btnLimpiar").click(() => {
   $("#candidato3").prop("checked", false);
   $("#txtDNI").prop("disabled", false);
   $("#txtNombre").prop("disabled", false);
+  votosCand1 = [];
+    votosCand2 = [];
+    votosCand3 = [];
 });
