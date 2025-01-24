@@ -383,44 +383,64 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 style="text-align: center;">Latidos Máximos</h3>  
+                                    <h3 style="text-align: center;">Votaciones</h3>  
                                 </div> 
                             </div> 
                         </div>
                     </div>
-                    <!-- formulario -->   
+                    
+                    <!-- Información del votante -->
                     <br>
-                    <form>
-                        <div class="row">
-                          <div class="col-md-4">
-                            <label for="txtLatMax">Latidos máximos</label>
-                            <input id="txtLatMax" type="number" value="220" class="form-control" placeholder="First name" disabled>
-                          </div>
-                          <div class="col-md-4">
-                            <label for="txtLatMax">Edad de la persona</label>
-                            <input id="txtEdad" type="number" class="form-control" placeholder="edad" maxlength="3">
-                          </div>
-                          <div class="col-md-4">
-                            <label for="txtLatMax">Latidos máximos</label>
-                            <input id="txtLatMin" type="number" class="form-control" placeholder="" maxlength="3" disabled>
-                          </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <label for="txtLatMax">DNI</label>
+                          <input id="txtDNI" type="text" placeholder="ejm 0501199912345" class="form-control">
                         </div>
-                        <div class="row">
-                            <!--botones para calcular y limpiar datos -->
-                            <div class="col-md-4">
-                                <br>
-                                <button id="btnCalculo" type="button" class="btn btn-success">Calcular</button>
-                                <button id="btnLimpiar" type="button" class="btn btn-warning">Limpiar</button>
+                        <div class="col-md-6">
+                          <label for="txtLatMax">Nombre del Votante</label>
+                          <input id="txtNombre" type="text" class="form-control" placeholder="nombre">
+                        </div>
+                      </div>
+                    
+                    <!-- Select de Candidatos -->
+                    <br>
+                    <div class="row">
+                        <form>
+                            <fieldset id="fieldsetVotaciones">
+                              <div class="form-group">
+                                <label for="disabledSelect">Candidatos</label>
+                                <select id="slcCandidatos" class="form-control">
+                                  <option selected>SELECCIONAR...</option>
+                                  <option id="candidato1">Candidato 1</option>
+                                  <option id="candidato2">Candidato 2</option>
+                                  <option id="candidato3">Candidato 3</option>
+                                </select>
+                              </div>    
+                              <br>
+                              <button id="btnVotar" type="button" class="btn btn-success">Enviar Voto</button>
+                              <button id="btnLimpiar" type="reset" class="btn btn-warning">Restablecer</button>
+                              <button id="btnCerrarElecciones" type="button" class="btn btn-danger">Cerrar Elecciones</button>
+                            </fieldset>
+                          </form>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                          <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 style="text-align: center;">Resultados</h3>  
+                                    </div> 
+                                    <div class="card-body">
+                                        <span id="resultados">
+                                        </span>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
-                        <!-- Iframe de adorno -->
-                         <br>
-                        <div class="row">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PO30aRQ2Wp4?si=_YlHFb3OZcJ_cuLZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                      </form>
-                    
-
+                    </div>
+                    <!-- formulario --> 
                 </div> <!--end::Container-->
             </div> <!--end::App Content-->
         </main> <!--end::App Main--> <!--begin::Footer-->
@@ -440,7 +460,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
     <script src="../../dist/js/adminlte.js"></script> <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-    <script src="dist/js/ejercicio2Latidos.js"></script>
+    <script src="dist/js/ejercicio3votaciones.js"></script>
     <script>
         const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
         const Default = {
